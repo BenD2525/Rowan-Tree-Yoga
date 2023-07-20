@@ -2,11 +2,11 @@
 import os
 from pathlib import Path
 import environ
+import dj_database_url
+
 # Initialise environment variables
 env = environ.Env()
 environ.Env.read_env()
-
-import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -74,6 +74,14 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+
 WSGI_APPLICATION = 'rowan_tree_yoga.wsgi.application'
 
 
@@ -122,6 +130,9 @@ USE_L10N = True
 USE_TZ = True
 
 
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
@@ -131,3 +142,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
