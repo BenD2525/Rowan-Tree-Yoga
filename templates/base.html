@@ -42,8 +42,38 @@
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top dark-red-bg">
+    <a class="navbar-brand" href="#" class="p-0 m-0"><img src="static\hero_image_small.jpg" alt="Hero Image"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon burger-menu"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Classes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
     {% block content %}
     {% endblock %}
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <span class="text-muted">Links here</span>
+      </div>
+    </footer>
 </body>
 
   {% block postloadjs %}
@@ -51,7 +81,5 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
   </script>
   {% endblock %}
-
-</body>
 
 </html>
