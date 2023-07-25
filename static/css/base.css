@@ -1,5 +1,5 @@
 .dark-red-bg {
-    background-color: red;
+    background-color: darkred;
 }
 
 .nav-link {
@@ -9,4 +9,12 @@
 
 .burger-menu {
     font-size: 40px;
+    font-weight: 400;
+    color: white;
+}
+
+.title {
+    font-size: 60px;
+    color: white;
+    font-weight: 400;
 }
