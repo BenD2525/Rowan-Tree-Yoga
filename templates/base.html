@@ -59,7 +59,7 @@
       <header class="header">
         <nav class="navbar navbar-expand-lg fixed-top py-3">
           <div class="container">
-            <a href="#" class="navbar-brand text-uppercase font-weight-bold"
+            <a href="{% url 'home:home' %}" class="navbar-brand text-uppercase font-weight-bold"
               >Rowan Tree Yoga</a
             >
             <button
@@ -91,9 +91,23 @@
                 </li>
                 <li class="nav-item">
                   <a
+                    href="{% url 'home:classes' %}"
+                    class="nav-link text-uppercase font-weight-bold"
+                    >Classes</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
                     href="{% url 'home:gallery' %}"
                     class="nav-link text-uppercase font-weight-bold"
                     >Gallery</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="{% url 'home:reviews' %}"
+                    class="nav-link text-uppercase font-weight-bold"
+                    >Reviews</a
                   >
                 </li>
                 <li class="nav-item">
@@ -109,13 +123,12 @@
         </nav>
       </header>
     </div>
-
-    {% block content %} {% endblock %}
+<div class="content-wrapper">
+    {% block content %} 
+    {% endblock %}
+  </div>
     <div class="footer-basic">
       <footer>
-        <div class="social">
-          <a href="#"><i class="icon ion-social-facebook"></i></a>
-        </div>
         <ul class="list-inline">
           <li class="list-inline-item">
             <a href="{% url 'home:home' %}">Home</a>
@@ -124,7 +137,13 @@
             <a href="{% url 'home:about_us' %}">About</a>
           </li>
           <li class="list-inline-item">
+            <a href="{% url 'home:classes' %}">Classes</a>
+          </li>
+          <li class="list-inline-item">
             <a href="{% url 'home:gallery' %}">Gallery</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="{% url 'home:reviews' %}">Reviews</a>
           </li>
           <li class="list-inline-item">
             <a href="{% url 'home:contact_us' %}">Contact</a>
@@ -154,9 +173,10 @@
           }
         });
       });
+      // Transparent Footer
       $(function () {
         $(window).on("scroll", function () {
-          if ($(window).scrollTop() > 10) {
+          if ($(window).scrollTop() > 5) {
             $(".footer-basic").addClass("active");
           } else {
             $(".footer-basic").removeClass("active");

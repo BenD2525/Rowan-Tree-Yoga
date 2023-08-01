@@ -43,10 +43,26 @@
     }
 } */
 
-body {
+.home-1 {
     background-image: url("../tree_pose.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.home-2 {
+    color: black;
+    padding: 5%;
+}
+
+.home-button {
+    display: flex;
+    align-items: center;
+    width: auto;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+body {
     min-height: 100vh;
 }
 
@@ -74,6 +90,7 @@ body {
 .footer-basic.active {
     background: #fff;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
 }
 
 .navbar.active .nav-link,
@@ -173,5 +190,25 @@ body {
     color:#aaa;
     margin-bottom:0;
   }
+
+  .content-wrapper {
+        padding-bottom: 8rem;
+        /* Footer height */
+        height: 100%;
+        width: 100%;
+        min-height: 100vh;
+        padding-top: 4rem;
+    }
+
+  /* Buttons */
+
+  .btn-cool-blues {
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 3px solid #eee;
+}
+
   
   

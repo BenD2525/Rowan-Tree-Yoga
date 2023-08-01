@@ -11,3 +11,9 @@ def gallery(request):
 
 def contact_us(request):
     return render(request, 'home/contact_us.html')
+
+def classes(request):
+    return render(request, 'home/classes.html')
+
+def reviews(request):
+    return render(request, 'home/reviews.html')
