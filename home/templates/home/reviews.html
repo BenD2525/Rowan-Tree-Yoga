@@ -3,4 +3,16 @@
 
 {% block content %}
    <h1>Reviews</h1> 
+      {% for review in reviews %}
+      <div class="row featurette">
+          <div class="col-sm-12">
+              <h2 class="featurette-heading">{{ review.title }}</h2>
+              <p class="lead">{{ review.content }}</p>
+              <div class="row justify-content-between mx-1">
+                  <p>{{ review.user }}</p>
+                  <p>Date:{{ review.created }}</p>
+              </div>
+          </div>
+      </div>
+      {% endfor %}
 {% endblock %}
