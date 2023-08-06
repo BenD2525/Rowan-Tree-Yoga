@@ -27,11 +27,24 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'crispy_forms',
+    'crispy_bootstrap4',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    "phonenumber_field",
     'home',
 ]
+
+# Email Settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = f"Rowan Tree Yoga <{os.environ.get('EMAIL_HOST_USER')}>"
+ACCOUNT_EMAIL_SUBJECT_PREFIX = 'Rowan Tree Yoga '
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
