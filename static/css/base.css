@@ -44,14 +44,18 @@
 } */
 
 .home-1 {
-    background-image: url("../rowan_tree_home.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+}
+
+.home-wrapper {
+    background-image: url("../rowan_tree_home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .home-2 {
@@ -141,13 +145,19 @@ body {
 
 /* Footer */
 .footer-basic {
-    padding:20px 0;
+    padding:20px;
     position: fixed;
     width: 100vw;
     color: #fff;
     bottom: 0;
-  }
-  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
   .footer-basic ul {
     padding:0;
     list-style:none;
@@ -195,7 +205,6 @@ body {
   }
   
   .footer-basic .copyright {
-    margin-top:15px;
     text-align:center;
     font-size:13px;
     color:#aaa;

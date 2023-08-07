@@ -2,12 +2,14 @@
 {% load static %}
 
 {% block content %}
+<div class="home-wrapper">
 <div class="row home-1">
    <div class="col-sm-8 col-md-4 content-light">
       <h1>Your Path to Serenity and Strength!</h1>
       <p>Namaste and a warm embrace to Rowan Tree Yoga, a tranquil haven nestled near Swansea in the captivating landscapes of South Wales. 
          Led by our passionate yogini, Hannah, our sanctuary is dedicated to helping you embark on a transformative journey of self-discovery, inner peace, and physical vitality.</p>
    </div>
+</div>
 </div>
 <div class="row home-2">
    <div class="col-8">
@@ -19,4 +21,5 @@
       <button class="col btn btn-cool-blues" onclick="location.href='{% url 'home:classes' %}'">Class Schedule</button>
    </div>
 </div>
+
 {% endblock %}
