@@ -23,3 +23,13 @@ class Enquiry(models.Model):
 
     def __str__(self):
         return self.title
+    
+class Image(models.Model):
+    '''Model which stores gallery images.'''
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
+    description = models.CharField(max_length=255)
+    is_featured = models.BooleanField(default=False) # Only one image can be featured at a time.
+
+    def __str__(self):
+        return self.description

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views import View
-from .models import Review, Enquiry
+from .models import *
 from .forms import EnquiryForm
 from django.contrib import messages
 from rowan_tree_yoga.settings import DEFAULT_FROM_EMAIL
@@ -14,7 +14,27 @@ def about_us(request):
     return render(request, 'home/about_us.html')
 
 def gallery(request):
-    return render(request, 'home/gallery.html')
+    ''' Returns the Gallery page.'''
+
+    serialized_images = []
+
+    images = Image.objects.all()
+
+    for image in images:
+        serialized_images.append({
+            "image": image.image,
+            "description": image.description,
+            "id": image.id,
+        })
+
+    featured_image = Image.objects.filter(is_featured=True).first()
+
+    context = {
+        "images": serialized_images,
+        "featured_image": featured_image,
+        }
+
+    return render(request, 'home/gallery.html', context)
 
 class ContactUs(View):
     '''View which allows the user to contact the website.'''
