@@ -272,6 +272,10 @@ body {
   .carousel-item img {
     object-fit: cover;
   }
+
+  .carousel-item {
+    display: block;
+  }
   #carousel-thumbs {
     background: rgba(255,255,255,.3);
     bottom: 0;
@@ -309,4 +313,9 @@ body {
     }
   }
   
+  .thumbs-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
   

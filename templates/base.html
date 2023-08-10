@@ -38,6 +38,12 @@
       type="text/css"
     />
     {% endblock %} {% block corejs %}
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Touch swipe -->
+    <script type="text/javascript" src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
+    <!-- Ekko-Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/8e896d3229.js"
@@ -170,10 +176,8 @@
         <a href="#" aria-label="Arrow to top of page"><i class="fa-solid fa-arrow-up fa-lg"></i></a>
         <p class="copyright">Rowan Tree Yoga © 2023</p>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     {% block postloadjs %}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
